@@ -14,3 +14,5 @@ print("CG changed again")
 
 print("So hard!")
 print("i did it!!")
+
+print('oh fuck')
