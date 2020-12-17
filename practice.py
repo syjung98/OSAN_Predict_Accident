@@ -13,6 +13,18 @@ print("haha")
 print("CG changed again")
 
 print("So hard!")
+
 print("i did it!!")
 
 print('oh fuck')
+
+print("정민이 수정 받고 창균 수정")
+
+print("i did it!!")
+
+
+print("TEST 중123")
+print("MW Brench")
+print("Change")
+
+print("gdgdgdg")
