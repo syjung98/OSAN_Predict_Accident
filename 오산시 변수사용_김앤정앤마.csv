@@ -1,0 +1,26 @@
+﻿구분,,변수 상세,출처,데이터 전처리,변수명
+인구적 특성,인구,총 인구수,4.오산시_연령별_거주인구격자(총인구).geojson,,pop_val
+,,유소년 인구수,5.오산시_연령별_거주인구격자(유소년).geojson,어린이 인구를 대표할 유소년 인구,junior_val
+,유동인구,유동인구,8. 오산시_유동인구(2019).csv,08시부터 20시까지의 유동인구를 합하여 격자별로 유동인구 계산,floating_val
+사회 경제적 특성,개발 정도,격자별 빌딩 밀도,28.오산시_건물연면적_격자.geojson,격자 건물의 밀도를 계산하기 위해 격자별로 건물의 수를 count,grid_building_val
+,통행 유발시설,"어린이집, 유치원",13.오산시_어린이집_유치원현황.csv,어린이 생활 반경을 반영하기 위해 300m Buffer,kinder_buffer_val
+,,초등학교,10.오산시_학교위치정보.csv,어린이 생활 반경을 반영하기 위해 300m Buffer,school_buffer_val
+,,학원 수,30.오산시_학원_및_교습소_현황.csv,어린이 생활 반경을 반영하기 위해 300m Buffer,academy_buffer_val
+,,스포츠 시설 수,29.오산시_체육시설현황.csv,어린이 생활 반경을 반영하기 위해 300m Buffer,sports_buffer_val
+,안전 모니터링,CCTV 개수,20.오산시_CCTV설치현황.csv,이미 대부분 잘 커버한다고 판단하고 격자별로 Count,cctv_val
+,보호구역,어린이 보호구역 수,9.오산시_어린이보호구역.csv,보호구역 주변 도로로 한정하기 위해 100m Buffer,protection_area_buffer_val
+도로 및 환경 특성,도로 특성,30km/h 도로 연장 비율,  23.오산시_상세도로망_LV6.geojson,30km/h 속도 제한구역이 있다면 1 없다면 0,road_30kmph
+,교차로,3지/4지/5지 교차로 수,16.오산시_도로안전표지표준데이터.csv,교차로 개수 Count,road_sign_val
+,속도 변화 구간,도로위계 변화 지점,외부데이터(http://data.nsdi.go.kr/dataset/12902),"고속도로, 대로, 로, 길로 도로 위계가 변하는 지점 Count",joint_val
+,교통안전 시설,횡단보도 수,17.오산시_횡단보도.geojson,격자별 횡단보도 개수 Count,crosswalk_val
+,,신호등 수,19.오산시_신호등.geojson,격자별 신호등 개수 Count,traffic_light_val
+,,과속방지턱 수,18.오산시_과속방지턱표준데이터.csv,격자별 과속방지턱 개수 Count,bump_val
+,,인도 수,21.오산시_인도.geojson,격자별 인도 개수 Count,sidewalk_val
+,대중교통,버스 정류장 수,22.오산시_버스정류장.csv,어린이의 생활 반경을 기준으로 300m Buffer 진행,bus_stop_buffer_val
+교통 특성,범칙,주정차 단속 건수,1.오산시_주정차단속(2018~2020).csv,격자별로 주정차 단속 건수 Count,pk_val
+,안전 모니터링,교통 단속 카메라 수,15.오산시_무인교통단속카메라.csv,CCTV가 관찰할 수 있는 범위 반영하여 100m Buffer,traffic_cctv_buffer_val
+,교통량,총 교통량,"24.평일_전일,시간대별_오산시_추정교통량_Level6.csv","08시에서 20시 데이터 합산, 링크를 격자에 산입 Intersect",all_traffic
+,,화물차 교통량,"24.평일_전일,시간대별_오산시_추정교통량_Level6.csv","08시에서 20시 데이터 합산, 링크를 격자에 산입 Intersect",freight_car_traffic
+,,정체 시간,26.평일_전일_오산시_혼잡시간강도_Level6.csv,,time
+,,정체 빈도,25.평일_전일_오산시_혼잡빈도강도_Level6.csv,,frequency
+,교통사고,어린이 교통사고 건수,2.오산시_어린이교통사고_격자.geojson,,accident_cnt
